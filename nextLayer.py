@@ -1,6 +1,11 @@
 import bpy
 import math
 import mathutils
+StandLocationRadius=56.0
+MountRadius=2.5
+StandMountWallThickness=1
+StandRadius=MountRadius+StandMountWallThickness
+StandHoleRadius=MountRadius+StandMountWallThickness
 
 bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=59, depth=5.0, location=(0,0, 1.25))
 bigHole = bpy.context.selected_objects[0]
@@ -19,11 +24,10 @@ bpy.ops.object.select_all(action='DESELECT')
 bpy.data.objects['BigHole'].select_set(state=True)
 bpy.ops.object.delete()
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=1.5, depth=5.0, location=(0,55.0, 1.25))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandHoleRadius, depth=5.0, location=(0,(StandLocationRadius), 1.25))
 screwHole = bpy.context.selected_objects[0]
 screwHole.name="ScrewHole"
-
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=4.0, depth=3.0, location=(0,55.0, 1.5))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandRadius, depth=3.0, location=(0,(StandLocationRadius), 1.5))
 stand = bpy.context.selected_objects[0]
 stand.name="Stand"
 
@@ -54,11 +58,11 @@ bpy.data.objects['Stand'].select_set(state=True)
 nextLayer = bpy.context.selected_objects[0]
 nextLayer.name="NextLayer"
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=1.5, depth=5.0, location=(0,-55.0, 1.25))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandHoleRadius, depth=5.0, location=(0,-(StandLocationRadius), 1.25))
 screwHole = bpy.context.selected_objects[0]
 screwHole.name="ScrewHole"
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=4.0, depth=3.0, location=(0,-55.0, 1.5))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandRadius, depth=3.0, location=(0,-(StandLocationRadius), 1.5))
 stand = bpy.context.selected_objects[0]
 stand.name="Stand"
 
@@ -90,11 +94,11 @@ nextLayer = bpy.context.selected_objects[0]
 nextLayer.name="NextLayer"
 
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=1.5, depth=5.0, location=(55.0, 0.0, 1.25))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandHoleRadius, depth=5.0, location=((StandLocationRadius), 0.0, 1.25))
 screwHole = bpy.context.selected_objects[0]
 screwHole.name="ScrewHole"
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=4.0, depth=3.0, location=(55.0, 0.0, 1.5))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandRadius, depth=3.0, location=((StandLocationRadius), 0.0, 1.5))
 stand = bpy.context.selected_objects[0]
 stand.name="Stand"
 
@@ -125,11 +129,11 @@ bpy.data.objects['Stand'].select_set(state=True)
 nextLayer = bpy.context.selected_objects[0]
 nextLayer.name="NextLayer"
 #
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=1.5, depth=5.0, location=(-55.0, 0.0, 1.25))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandHoleRadius, depth=5.0, location=(-(StandLocationRadius), 0.0, 1.25))
 screwHole = bpy.context.selected_objects[0]
 screwHole.name="ScrewHole"
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=4.0, depth=3.0, location=(-55.0, 0.0, 1.5))
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=StandRadius, depth=3.0, location=(-(StandLocationRadius), 0.0, 1.5))
 lastStand = bpy.context.selected_objects[0]
 lastStand.name="LastStand"
 

@@ -2,7 +2,8 @@ import bpy
 
 holeDepth=5
 holeRadius=1.5
-
+basePlateRadius=62.0
+basePlateDepth=2.0
 bpy.ops.mesh.primitive_cube_add()
 gearHole = bpy.context.selected_objects[0]
 gearHole.name="GearHole"
@@ -163,7 +164,7 @@ bpy.ops.object.delete()
 #bpy.data.objects['AllTheHoles'].select_set(state=False)
 bpy.data.objects["AllTheHoles"].location.x += 12.0
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=62, depth=2.0, location=(0,0, 1.0))
+bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=basePlateRadius, depth=basePlateDepth, location=(0,0,basePlateDepth/2.0))
 baseplate = bpy.context.selected_objects[0]
 baseplate.name="BasePlate"
 
@@ -176,22 +177,6 @@ bpy.ops.object.select_all(action='SELECT')
 bpy.data.objects['BasePlate'].select_set(state=False)
 bpy.ops.object.delete()
 
-bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=59, depth=5.0, location=(0,0, 1.25))
-bigHole = bpy.context.selected_objects[0]
-bigHole.name="BigHole"
-
-bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=61, depth=3.0, location=(0,0, 1.5))
-nextLayer = bpy.context.selected_objects[0]
-nextLayer.name="NextLayer"
-
-bpy.ops.object.modifier_add(type='BOOLEAN')
-bpy.context.object.modifiers["Boolean"].object = bigHole
-bpy.context.object.modifiers["Boolean"].operation = 'DIFFERENCE'
-bpy.ops.object.modifier_apply(apply_as='DATA', modifier="Boolean")
-
-bpy.ops.object.select_all(action='DESELECT')
-bpy.ops.object.select_pattern(pattern = 'BigHole')
-bpy.ops.object.delete()
 
 #newHoles8 = bpy.context.selected_objects[0]
 #newHoles8.name = ""

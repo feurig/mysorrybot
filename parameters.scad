@@ -1,0 +1,10 @@
+$fa = 1;
+$fs = 0.4;
+standLocationRadius=56.5;
+internalMountRadius=48;
+standRadius=2.75;
+standHoleRadius=1.0;
+standLipWidth=1.5;
+standLipHeight=3.5;
+standHeight=2.75;
+standHoleDepth=5.0;

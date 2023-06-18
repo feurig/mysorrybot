@@ -39,4 +39,8 @@ module next_layer(bottom_z=2.0){
     }
 }
 
+//projection(cut=true) {
+translate(0.0,0.0,-(2+StandHeight)){
 next_layer(0);
+}
+//}

@@ -5,3 +5,4 @@ Here is a [video of my original sorry bot](docs/sorrybot.mov)
 
 My first attempts were in blender and then in bpy. I still cant get blender to work the way I want it to so I am rewriting things in openSCAD. It is much nicer.
 
+For that reason I thought it would makd a decent [ITP SUMMER CAMP SESSION](docs/ITPClassNotes.md)

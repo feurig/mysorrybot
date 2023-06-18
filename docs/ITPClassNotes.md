@@ -16,6 +16,8 @@ feurig@Nix ~ % brew install openscad
 ```
 
 ## Linkdump
+- https://github.com/feurig/mysorrybot/blob/main/docs/ITPClassNotes.md
+- https://github.com/feurig/mysorrybot/
 - http://openscad.org
 - https://mastering-openscad.eu/buch/reference/
 - https://www.thingiverse.com/search?q=scad&page=4&type=things&sort=relevant

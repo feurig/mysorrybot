@@ -51,6 +51,7 @@ module base_plate(){
         }
     }
 }
-
+projection(cut=false){
 base_plate();
+}
 

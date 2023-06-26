@@ -6,4 +6,4 @@ Here is a [video of my original sorry bot](docs/sorrybot.mov)
 
 Later when I bought my last 3d printer I thought It might be a good idea the revisit the project. My first attempts were in blender and then in bpy (blender python). I could never get blender to work the way I needed it to so I am rewrote things in openSCAD. It is much less painfull.
 
-I thought it would makd a decent [ITP SUMMER CAMP SESSION](docs/ITPClassNotes.md)
+I thought it would make a decent [ITP SUMMER CAMP SESSION](docs/ITPClassNotes.md)

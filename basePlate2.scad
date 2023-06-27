@@ -19,7 +19,7 @@ module base_plate(){
                 translate([-69.0,0,0]){cylinder(r=standHoleRadius,h=standHoleDepth,center=true);}
 
                 translate([-60,0,0]){cube([10,40,standHoleDepth],center=true);}
-                translate([-30,0,0]){cube([sensorLength,sensorWidth,standHoleDepth],center=true);}
+                translate([-29,0,0]){cube([sensorLength,sensorWidth,standHoleDepth],center=true);}
                 translate([0,0,0]) { cube([18,28,standHoleDepth],center=true);}
                 translate([0,49,0]) { cube([28,8,standHoleDepth],center=true);}
                 translate([0,-49,0]) { cube([28,8,standHoleDepth],center=true);}

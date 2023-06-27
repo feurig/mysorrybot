@@ -62,7 +62,7 @@ intersection() {
 }
 
 projection(cut=false){
-//base_plate();
-motor_mount();
+base_plate();
+//motor_mount();
 }
 

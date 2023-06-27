@@ -8,3 +8,5 @@ standLipWidth=1.5;
 standLipHeight=3.5;
 standHeight=2.85;
 standHoleDepth=5.0;
+sensorWidth=92.0;
+sensorLength=9.0;

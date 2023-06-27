@@ -51,7 +51,18 @@ module base_plate(){
         }
     }
 }
+module motor_mount(){
+intersection() {
+   translate ([-10.0,0.0,0.0]) {
+         cube([35.0,60.0,10.0], center=true); 
+ }
+   base_plate();    
+}
+
+}
+
 projection(cut=false){
-base_plate();
+//base_plate();
+motor_mount();
 }
 
